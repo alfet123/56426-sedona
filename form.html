@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8">
+    <title>Sedona - Форма</title>
+  </head>
+  <body>
+
+    <header>
+
+      <nav>
+        <ul>
+          <li><a href="#">Информация</a></li>
+          <li><a href="#">Оставить отзыв</a></li>
+          <li><a href="#">Блог шерифа</a></li>
+          <li><a href="#">Гостиницы</a></li>
+        </ul>
+      </nav>
+
+    </header>
+
+
+
+    <div>
+
+      <div>
+        <h1>Оставьте свой отзыв</h1>
+        <div>Помогите нашим отелям стать лучше! Оставьте отзыв о них, а так же о посещенных вами достопримечательностях</div>
+      </div>
+
+      <form>
+
+        <fieldset>
+          <legend>Представьтесь, пожалуйста:</legend>
+          <label for="person-family">Фамилия:</label>
+          <input type="text" name="person-family" id="person-family" value="Иванов">
+          <label for="person-name">Имя:</label>
+          <input type="text" name="person-name" id="person-name" value="Петр">
+          <label for="person-patronymic">Отчество:</label>
+          <input type="text" name="person-patronymic" id="person-patronymic" value="Александрович">
+        </fieldset>
+
+        <fieldset>
+          <legend>Ваше общее впечатление:</legend>
+          <input type="radio" name="impression" value="positiv" id="impression-positiv" checked>
+          <label for="impression-positiv">Скорее положительное</label>
+          <input type="radio" name="impression" value="negativ" id="impression-negativ">
+          <label for="impression-negativ">Скорее отрицательное</label>
+        </fieldset>
+
+        <fieldset>
+          <legend>Даты вашей поездки:</legend>
+          <label for="date-arrival">Дата приезда:</label>
+          <input type="date" name="date-arrival" id="date-arrival" value="4 июля 2015">
+          <label for="date-duration">Дней пребывания:</label>
+          <input type="text" name="date-duration" id="date-duration" value="14"><label>дн.</label>
+          <label for="date-departure">Дата отъезда:</label>
+          <input type="date" name="date-departure" id="date-departure" value="28 июля 2015">
+        </fieldset>
+
+        <fieldset>
+          <legend>Кол-во путешественников:</legend>
+          <label for="member-amount">Количество путешественников:</label>
+          <input type="text" name="member-amount" id="member-amount" value="2"><label>чел.</label>
+
+          <table>
+
+            <tr>
+              <td>
+                <label for="member-position-1">№</label>
+                <input type="text" name="member-position" id="member-position-1" value="1" readonly>
+              </td>
+              <td>
+                <label for="member-family-1">Фамилия:</label>
+                <input type="text" name="member-family" id="member-family-1" value="Иванов">
+              </td>
+              <td>
+                <label for="member-name-1">Имя:</label>
+                <input type="text" name="member-name" id="member-name-1" value="Петр">
+              </td>
+              <td>
+                <label for="member-patronymic-1">Отчество:</label>
+                <input type="text" name="member-patronymic" id="member-patronymic-1" value="Александрович">
+              </td>
+            </tr>
+
+            <tr>
+              <td>
+                <label for="member-position-2">№</label>
+                <input type="text" name="member-position" id="member-position-2" value="2" readonly>
+              </td>
+              <td>
+                <label for="member-family-2">Фамилия:</label>
+                <input type="text" name="member-family" id="member-family-2" value="Иванов">
+              </td>
+              <td>
+                <label for="member-name-2">Имя:</label>
+                <input type="text" name="member-name" id="member-name-2" value="Петр">
+              </td>
+              <td>
+                <label for="member-patronymic-2">Отчество:</label>
+                <input type="text" name="member-patronymic" id="member-patronymic-2" value="Александрович">
+              </td>
+            </tr>
+
+          </table>
+
+        </fieldset>
+
+        <fieldset>
+          <legend>Посещенные достопримечательности:</legend>
+          <input type="checkbox" name="sight-1" id="sight-1" value="bridge" checked>
+          <label for="sight-1">Мост дьявола</label>
+          <input type="checkbox" name="sight-2" id="sight-2" value="park">
+          <label for="sight-2">Слайд-парк</label>
+          <input type="checkbox" name="sight-3" id="sight-3" value="bell" checked>
+          <label for="sight-3">Гора-колокол</label>
+          <input type="checkbox" name="sight-4" id="sight-4" value="rocks" checked>
+          <label for="sight-4">Красные скалы</label>
+        </fieldset>
+
+        <fieldset>
+          <legend>Загрузите фотографии:</legend>
+          <a href="#">Выбрать фотографии</a>
+          <ul>
+            <li><img src="" alt="Image 1"></li>
+            <li><img src="" alt="Image 2"></li>
+            <li><img src="" alt="Image 3"></li>
+            <li><img src="" alt="Image 4"></li>
+            <li><img src="" alt="Image 5"></li>
+            <li><img src="" alt="Image 6"></li>
+            <li><img src="" alt="Image 7"></li>
+          </ul>
+        </fieldset>
+
+        <input type="submit" value="Отправить отзыв">
+
+      </form>
+
+    </div>
+
+
+
+    <footer>
+
+      <div>#visitsedona</div>
+      <div>
+        <a href="#"><img src="" alt="Twitter"></a>
+        <a href="#"><img src="" alt="Facebook"></a>
+        <a href="#"><img src="" alt="YouTube"></a>
+      </div>
+      <a href="http://htmlacademy.ru">
+        <span>Разработано</span>
+        <img src="" alt="HTML Academy">
+      </a>
+
+    </footer>
+
+  </body>
+</html>
