@@ -1,21 +1,29 @@
 <!DOCTYPE html>
 <html lang="ru">
+
   <head>
     <meta charset="utf-8">
     <title>Sedona - Главная</title>
   </head>
+
   <body>
 
-    <header>
+    <header class="main-header">
 
-      <nav>
-        <ul>
-          <li><a href="#">Информация</a></li>
-          <li><a href="#">Оставить отзыв</a></li>
-          <li><a href="#">Блог шерифа</a></li>
-          <li><a href="#">Гостиницы</a></li>
+      <div class="mobile-menu-close-btn"></div>
+
+      <nav class="main-menu">
+        <ul class="main-menu__list">
+          <li class="main-menu__item"><a class="main-menu__link" href="#">Информация</a></li>
+          <li class="main-menu__item"><a class="main-menu__link" href="#">Оставить отзыв</a></li>
+          <li class="main-menu__item"><a class="main-menu__link" href="#">Блог шерифа</a></li>
+          <li class="main-menu__item"><a class="main-menu__link" href="#">Гостиницы</a></li>
         </ul>
       </nav>
+
+      <a class="main-page-link" href="#"><img src="img/logo.png" alt="Главная"></a>
+
+      <div class="mobile-menu-open-btn"></div>
 
     </header>
 
@@ -23,82 +31,112 @@
 
     <div class="content">
 
-      <div>
-        <h1>Седона &mdash; небольшой городок в Аризоне, заслуживающий большего!</h1>
-        <div>Рассмотрим 5 причин, по которым Седона круче, чем Гранд каньон!</div>
+      <div class="intro">
+        <div class="intro__image"></div>
+        <div class="intro__description">
+          <h1 class="intro__title">Седона &mdash; небольшой городок в Аризоне, заслуживающий большего!</h1>
+          <p class="intro__text">Рассмотрим 5 причин, по которым Седона круче, чем Гранд каньон!</p>
+        </div>
       </div>
 
-      <div>
-        <h2>Настоящий городок</h2>
-        <div>№1</div>
-        <div>Седона не атракцион для туристов, там течет своя жизнь</div>
+      <div class="reason-row">
+
+        <div class="reason">
+          <h2 class="reason__title">Настоящий городок</h2>
+          <div class="reason__number">№1</div>
+          <p class="reason__text">Седона не атракцион для туристов, там течет своя жизнь</p>
+        </div>
+
+        <div class="reason-image  image-1"></div>
+
       </div>
 
-      <div>
-        <h2>Жилье</h2>
-        <div>Рекомендуем пожить в настоящем мотеле, все как в кино!</div>
+      <div class="feature-row">
+
+        <div class="feature">
+          <div class="feature__image"></div>
+          <h2 class="feature__title">Жилье</h2>
+          <p class="feature__text">Рекомендуем пожить в настоящем мотеле, все как в кино!</p>
+        </div>
+
+        <div class="feature">
+          <div class="feature__image"></div>
+          <h2 class="feature__title">Еда</h2>
+          <p class="feature__text">Всегда заказывайте фирменный бургер, вы не разочаруетесь!</p>
+        </div>
+
+        <div class="feature">
+          <div class="feature__image"></div>
+          <h2 class="feature__title">Сувениры</h2>
+          <p class="feature__text">Не только китайского, но и местного производства!</p>
+        </div>
+
       </div>
 
-      <div>
-        <h2>Еда</h2>
-        <div>Всегда заказывайте фирменный бургер, вы не разочаруетесь!</div>
+      <div class="reason-row">
+
+        <div class="reason">
+          <h2 class="reason__title">Там есть мост дьявола</h2>
+          <div class="reason__number">№2</div>
+          <p class="reason__text">Да, по нему можно пройти! Если конечно вы осмелитесь</p>
+        </div>
+
+        <div class="reason-image  image-2"></div>
+
       </div>
 
-      <div>
-        <h2>Сувениры</h2>
-        <div>Не только китайского, но и местного производства!</div>
+      <div class="reason-row">
+
+        <div class="reason">
+          <h2 class="reason__title">Небольшая площадь</h2>
+          <div class="reason__number">№3</div>
+          <p class="reason__text">Все достопримеча<wbr>тельности находятся очень близко</p>
+        </div>
+
+        <div class="reason">
+          <h2 class="reason__title">Красивая дорога</h2>
+          <div class="reason__number">№4</div>
+          <p class="reason__text">Ехать в Седону из Лас-Вегаса совсем не скучно!</p>
+        </div>
+
+        <div class="reason">
+          <h2 class="reason__title">Мало туристов</h2>
+          <div class="reason__number">№5</div>
+          <p class="reason__text">Большинство едет в Гранд Каньон и толпится там</p>
+        </div>
+
       </div>
 
-      <div>
-        <h2>Там есть мост дьявола</h2>
-        <div>№2</div>
-        <div>Да, по нему можно пройти! Если конечно вы осмелитесь</div>
+      <div class="book-hotel">
+        <h2 class="book-hotel__title">Заинтересовались?</h2>
+        <p class="book-hotel__text">Укажите предполагаемые даты поездки и мы покажем вам лучшие предложения гостиниц в Седоне</p>
+        <a class="book-hotel__btn" href="#">Найти гостиницу</a>
       </div>
 
-      <div>
-        <h2>Небольшая площадь</h2>
-        <div>№3</div>
-        <div>Все достопримечательности находятся очень близко</div>
-      </div>
-
-      <div>
-        <h2>Красивая дорога</h2>
-        <div>№4</div>
-        <div>Ехать в Седону из Лас-Вегаса совсем не скучно!</div>
-      </div>
-
-      <div>
-        <h2>Мало туристов</h2>
-        <div>№5</div>
-        <div>Большинство едет в Гранд Каньон и толпится там</div>
-      </div>
-
-      <div>
-        <h2>Заинтересовались?</h2>
-        <div>Укажите предполагаемые даты поездки и мы покажем вам лучшие предложения гостиниц в Седоне</div>
-        <a href="#">Найти гостиницу</a>
-      </div>
-
-      <div class="map"></div>
+      <div class="map"><div class="map__pointer"></div></div>
 
     </div>
 
 
 
-    <footer>
+    <footer class="main-footer">
 
-      <div>#visitsedona</div>
-      <div>
-        <a href="#"><img src="" alt="Twitter"></a>
-        <a href="#"><img src="" alt="Facebook"></a>
-        <a href="#"><img src="" alt="YouTube"></a>
+      <div class="main-footer__item">
+        <div class="visitsedona">#visitsedona</div>
       </div>
-      <a href="http://htmlacademy.ru">
-        <span>Разработано</span>
-        <img src="" alt="HTML Academy">
-      </a>
+
+      <div class="main-footer__item">
+        <a class="social-btn" href="#">Twitter</a>
+        <a class="social-btn" href="#">Facebook</a>
+        <a class="social-btn" href="#">YouTube</a>
+      </div>
+
+      <div class="main-footer__item">
+        <a class="designed-link" href="http://htmlacademy.ru">Разработано</a>
+      </div>
 
     </footer>
 
   </body>
+
 </html>
