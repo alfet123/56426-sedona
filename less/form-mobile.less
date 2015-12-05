@@ -5,7 +5,8 @@
 label {
   display: inline-block;
   margin: 0;
-  padding: 10px 20px;
+  padding: 10px;
+  padding-left: 20px;
 
   font-family: "PT Sans", "Arial", sans-serif;
   font-size: 14px;
@@ -262,20 +263,20 @@ input[type="checkbox"] {
     border-collapse: collapse;
 
     tbody {
-        display: block;
+      display: block;
     }
 
     tr {
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: flex-end;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: flex-end;
       margin: 0;
       margin-bottom: 15px;
       padding: 0;
     }
 
     td {
-        display: block;
+      display: block;
       margin: 0;
       padding: 0;
     }
@@ -283,6 +284,12 @@ input[type="checkbox"] {
     .col-1 {
       width: 60px;
       margin-right: 5px;
+
+      .member__label {
+        padding-right: 20px;
+        width: 20px;
+        text-align: center;
+      }
 
       .member__input {
         width: 20px;

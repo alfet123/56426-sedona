@@ -64,10 +64,12 @@
 }
 
 .main-page-link {
+  position: relative;
   display: block;
   margin: 0 auto;
   padding: 0;
   width: 138px;
+  z-index: 10;
 }
 
 .menu-close-btn {
@@ -102,7 +104,10 @@
 
 @media (min-width: @screen_md) {
 
-/*
+  .main-header {
+    padding-top: 0;
+  }
+
   .main-menu__item {
     display: inline-block;
     vertical-align: top;
@@ -110,15 +115,37 @@
     padding: 0;
     width: 20%;
     text-align: center;
+    background-color: #fff;
+    border: none;
+
+    &:hover {
+      background-color: #fff;
+    }
+
+    &:nth-child(2) {
+      margin-right: 20%;
+    }
+
+    &:last-child {
+      box-shadow: none;
+    }
   }
 
-  .mobile-item {
-    display: inline-block;
+  .main-menu__link {
+    font-size: 14px;
+    color: #000;
+
+    &:hover {
+      color: #81b3d2;
+    }
   }
 
-  .mobile-menu-open-btn {
+  .menu-close-btn {
     display: none;
   }
-*/
+
+  .menu-open-btn {
+    display: none;
+  }
 
 }

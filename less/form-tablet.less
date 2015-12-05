@@ -161,13 +161,6 @@
       display: table-cell;
     }
 
-    .col-1 {
-      .member__input {
-        width: 20px;
-        text-align: center;
-      }
-    }
-
     .col-2 {
       width: 190px;
 
@@ -246,39 +239,6 @@
     &:nth-child(3) {
       display: none;
     }
-
-    &:after {
-      content: "";
-      display: block;
-      position: absolute;
-      bottom: -30px;
-      width: 140px;
-
-      font-family: "PT Sans", "Arial", sans-serif;
-      font-size: 14px;
-      line-height: 20px;
-      font-weight: 400;
-      text-transform: uppercase;
-    }
-
-    &:nth-child(1):after {
-      content: "img-686.jpg";
-    }
-    &:nth-child(2):after {
-      content: "img-687.jpg";
-    }
-    &:nth-child(4):after {
-      content: "img-688.jpg";
-    }
-    &:nth-child(5):after {
-      content: "img-689.jpg";
-    }
-    &:nth-child(6):after {
-      content: "img-690.jpg";
-    }
-    &:nth-child(7):after {
-      content: "img-691.jpg";
-    }
   }
 
   .photo__image {
@@ -297,6 +257,17 @@
     &:hover {
       background-image: url("../img/cross-hvr.png");
     }
+  }
+
+  .photo__title {
+    display: block;
+    width: 140px;
+
+    font-family: "PT Sans", "Arial", sans-serif;
+    font-size: 14px;
+    line-height: 26px;
+    font-weight: 400;
+    text-transform: uppercase;
   }
 
   .photo__select-btn {
