@@ -1,0 +1,151 @@
+.main-header {
+  position: relative;
+  margin: 0;
+  padding: 0;
+  padding-top: 222px;
+
+  height: 56px;
+
+  background-color: #fff;
+}
+
+.main-menu {
+  position: absolute;
+  top: 0;
+  width: 100%;
+
+  margin: 0;
+  padding: 0;
+}
+
+.main-menu__list {
+  margin: 0;
+  padding: 0;
+
+  font-size: 0;
+}
+
+.main-menu__item {
+  display: block;
+  margin: 0;
+  padding: 0;
+  text-align: center;
+
+  border-top: 1px solid #9ac2db;
+  border-bottom: 1px solid #678fa8;
+
+  background-color: #81b3d2;
+
+  &:hover {
+    background-color: #669ec0;
+  }
+
+  &:first-child {
+    border-top: none;
+  }
+
+  &:last-child {
+    border-bottom: none;
+    box-shadow: inset 0 -5px 5px -4px #678fa8;
+  }
+}
+
+.main-menu__link {
+  display: block;
+  padding: 14px 0;
+
+  font-family: "PT Sans", "Arial", sans-serif;
+  font-size: 18px;
+  line-height: 26px;
+  font-weight: 700;
+  text-transform: uppercase;
+
+  color: #fff;
+}
+
+.logo {
+  position: relative;
+  display: block;
+  margin: 0 auto;
+  padding: 0;
+  width: 138px;
+  z-index: 10;
+}
+
+.menu-close-btn {
+  position: absolute;
+  top: 0;
+  right: 5px;
+  width: 56px;
+  height: 56px;
+  cursor: pointer;
+
+  background-image: url("../img/menu-close.png");
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.menu-open-btn {
+  position: absolute;
+  bottom: 0;
+  right: 5px;
+  width: 56px;
+  height: 56px;
+  cursor: pointer;
+
+  background-image: url("../img/menu-open.png");
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+/**************/
+/*** TABLET ***/
+/**************/
+
+@media (min-width: @screen_md) {
+
+  .main-header {
+    padding-top: 0;
+  }
+
+  .main-menu__item {
+    display: inline-block;
+    vertical-align: top;
+    margin: 0;
+    padding: 0;
+    width: 20%;
+    text-align: center;
+    background-color: #fff;
+    border: none;
+
+    &:hover {
+      background-color: #fff;
+    }
+
+    &:nth-child(2) {
+      margin-right: 20%;
+    }
+
+    &:last-child {
+      box-shadow: none;
+    }
+  }
+
+  .main-menu__link {
+    font-size: 14px;
+    color: #000;
+
+    &:hover {
+      color: #81b3d2;
+    }
+  }
+
+  .menu-close-btn {
+    display: none;
+  }
+
+  .menu-open-btn {
+    display: none;
+  }
+
+}
