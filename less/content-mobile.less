@@ -13,12 +13,45 @@
   width: 320px;
   height: 390px;
 
-  background: #e0f1f9 no-repeat;
-  background-image: url("../img/intro-mobile-text.jpg"), linear-gradient(to bottom, #e0f1f9 25%, #e3ac8f, #4a7a6a);
+  background-color: #e0f1f9;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-image: url("../img/bg-sm@1x.jpg"), linear-gradient(to bottom, #e0f1f9 25%, #e3ac8f, #4a7a6a);
 
   .inner-page & {
     height: 158px;
-    background-image: url("../img/intro-mobile-text-inner.jpg"), linear-gradient(to bottom, #e0f1f9 25%, #e3ac8f, #4a7a6a);
+    background-image: url("../img/bg-inner-sm@1x.jpg"), linear-gradient(to bottom, #e0f1f9 25%, #e3ac8f, #4a7a6a);
+  }
+}
+
+.intro__image-text {
+  display: block;
+  margin: 0 auto;
+
+  &--welcome {
+    margin-bottom: 8px;
+    padding-top: 47px;
+    width: 145px;
+  }
+
+  &--tothegorgeous {
+    margin-bottom: 60px;
+    width: 196px;
+  }
+
+  &--sedona {
+    margin-bottom: 67px;
+    width: 280px;
+
+    .inner-page & {
+      margin-bottom: 0;
+      padding-top: 49px;
+      width: 174px;
+    }
+  }
+
+  &--becausecanyon {
+    width: 196px;
   }
 }
 
@@ -57,7 +90,6 @@
   margin-bottom: 30px;
   padding: 0;
 
-  font-family: "PT Sans", "Arial", sans-serif;
   font-size: 18px;
   line-height: 26px;
   font-weight: 700;
@@ -72,7 +104,6 @@
 
   width: 280px;
 
-  font-family: "PT Sans", "Arial", sans-serif;
   font-size: 14px;
   line-height: 26px;
   font-weight: 400;
@@ -129,7 +160,6 @@
   margin-bottom: 15px;
   padding: 0;
 
-  font-family: "PT Sans", "Arial", sans-serif;
   font-size: 20px;
   line-height: 26px;
   font-weight: 700;
@@ -141,7 +171,6 @@
   margin-bottom: 20px;
   padding: 0;
 
-  font-family: "PT Sans", "Arial", sans-serif;
   font-size: 14px;
   line-height: 20px;
   font-weight: 400;
@@ -160,7 +189,6 @@
 
   width: 260px;
 
-  font-family: "PT Sans", "Arial", sans-serif;
   font-size: 14px;
   line-height: 20px;
   font-weight: 400;
@@ -248,7 +276,6 @@
   padding: 0;
   padding-top: 8px;
 
-  font-family: "PT Sans", "Arial", sans-serif;
   font-size: 20px;
   line-height: 26px;
   font-weight: 700;
@@ -262,7 +289,6 @@
   margin-right: 40px;
   padding: 0;
 
-  font-family: "PT Sans", "Arial", sans-serif;
   font-size: 14px;
   line-height: 20px;
   font-weight: 400;
@@ -290,7 +316,6 @@
   margin-bottom: 30px;
   padding: 0;
 
-  font-family: "PT Sans", "Arial", sans-serif;
   font-size: 24px;
   line-height: 30px;
   font-weight: 700;
@@ -304,7 +329,6 @@
 
   width: 260px;
 
-  font-family: "PT Sans", "Arial", sans-serif;
   font-size: 14px;
   line-height: 20px;
   font-weight: 400;
@@ -320,7 +344,6 @@
   width: 280px;
   height: 43px; /*58px;*/
 
-  font-family: "PT Sans", "Arial", sans-serif;
   font-size: 20px;
   line-height: 28px;
   font-weight: 700;

@@ -5,17 +5,42 @@
 @media (min-width: @screen_md) {
 
   .intro__image {
-    margin: 0;
-    padding: 0;
     width: 768px;
     height: 512px;
 
-    background: #e0f1f9 no-repeat;
-    background-image: url("../img/intro-tablet-text.jpg"), linear-gradient(to bottom, #e0f1f9 25%, #e3ac8f, #4a7a6a);
+    background-image: url("../img/bg-md@1x.jpg"), linear-gradient(to bottom, #e0f1f9 25%, #e3ac8f, #4a7a6a);
 
     .inner-page & {
       height: 290px;
-      background-image: url("../img/intro-tablet-text-inner.jpg"), linear-gradient(to bottom, #e0f1f9 25%, #e3ac8f, #4a7a6a);
+      background-image: url("../img/bg-inner-md@1x.jpg"), linear-gradient(to bottom, #e0f1f9 25%, #e3ac8f, #4a7a6a);
+    }
+  }
+
+  .intro__image-text {
+    &--welcome {
+      margin-bottom: 11px;
+      padding-top: 76px;
+      width: 190px;
+    }
+
+    &--tothegorgeous {
+      margin-bottom: 52px;
+      width: 256px;
+    }
+
+    &--sedona {
+      margin-bottom: 54px;
+      width: 460px;
+
+      .inner-page & {
+        margin-bottom: 0;
+        padding-top: 100px;
+        width: 460px;
+      }
+    }
+
+    &--becausecanyon {
+      width: 300px;
     }
   }
 
