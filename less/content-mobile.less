@@ -251,19 +251,22 @@
   width: 38px;
   height: 38px;
 
-  background-position: 50%;
+  background-position: center;
   background-repeat: no-repeat;
 
-  .feature-house > & {
-    background-image: url("../img/feature-house-mobile.png");
+  &--house {
+    background-size: 38px auto;
+    background-image: url("../img/icon-house.svg");
   }
 
-  .feature-souvenir > & {
-    background-image: url("../img/feature-souvenir-mobile.png");
+  &--food {
+    background-size: 38px auto;
+    background-image: url("../img/icon-burger.svg");
   }
 
-  .feature-food > & {
-    background-image: url("../img/feature-food-mobile.png");
+  &--souvenir {
+    background-size: auto 38px;
+    background-image: url("../img/icon-gift.svg");
   }
 }
 
