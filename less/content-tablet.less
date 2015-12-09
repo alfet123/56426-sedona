@@ -8,11 +8,22 @@
     width: 768px;
     height: 512px;
 
+    background-size: 768px 512px;
     background-image: url("../img/bg-md@1x.jpg"), linear-gradient(to bottom, #e0f1f9 25%, #e3ac8f, #4a7a6a);
 
     .inner-page & {
       height: 290px;
+      background-size: 768px 290px;
       background-image: url("../img/bg-inner-md@1x.jpg"), linear-gradient(to bottom, #e0f1f9 25%, #e3ac8f, #4a7a6a);
+    }
+  }
+
+  @media (min-resolution: 144dpi), (min-resolution: 1.5dppx) {
+    .intro__image {
+      background-image: url("../img/bg-md@2x.jpg"), linear-gradient(to bottom, #e0f1f9 25%, #e3ac8f, #4a7a6a);
+      .inner-page & {
+        background-image: url("../img/bg-inner-md@2x.jpg"), linear-gradient(to bottom, #e0f1f9 25%, #e3ac8f, #4a7a6a);
+      }
     }
   }
 
@@ -151,6 +162,7 @@
 
   .reason-image {
     width: 512px;
+    background-size: 512px 256px;
 
     &--city {
       background-image: url("../img/city-md@1x.jpg");
@@ -158,6 +170,17 @@
 
     &--bridge {
       background-image: url("../img/bridge-md@1x.jpg");
+    }
+  }
+
+  @media (min-resolution: 144dpi), (min-resolution: 1.5dppx) {
+    .reason-image {
+      &--city {
+        background-image: url("../img/city-md@2x.jpg");
+      }
+      &--bridge {
+        background-image: url("../img/bridge-md@2x.jpg");
+      }
     }
   }
 
@@ -241,7 +264,7 @@
 /*************/
 
   .map {
-    background: url("../img/map-tablet.jpg") no-repeat;
+    background: url("../img/map-md.jpg") no-repeat;
   }
 
 }
