@@ -87,9 +87,9 @@
             <div class="date__item">
               <label class="date__label" for="date-duration">Дней пребывания:<span class="required-mark">*</span></label>
               <div class="numeric  clearfix">
-                <div class="numeric__minus"></div>
+                <div class="numeric__minus" id="date-minus"></div>
                 <input class="numeric__count" type="text" name="date-duration" id="date-duration" placeholder="14" required><label>дн.</label>
-                <div class="numeric__plus"></div>
+                <div class="numeric__plus" id="date-plus"></div>
               </div>
             </div>
             <div class="date__item">
@@ -103,9 +103,9 @@
             <div class="member__item">
               <label class="member__label" for="member-amount">Количество путешественников:<span class="required-mark">*</span></label>
               <div class="numeric  clearfix">
-                <div class="numeric__minus"></div>
+                <div class="numeric__minus" id="member-minus"></div>
                 <input class="numeric__count" type="text" name="member-amount" id="member-amount" placeholder="2" required><label>чел.</label>
-                <div class="numeric__plus"></div>
+                <div class="numeric__plus" id="member-plus"></div>
               </div>
             </div>
 
@@ -176,7 +176,7 @@
           <fieldset class="review__item  photo">
             <h2 class="review__title">Загрузите фотографии:</h2>
             <label class="photo__select-btn" for="select-file">Выбрать фотографии</label>
-            <input class="photo__select-file" type="file" name="select-file" id="select-file">
+            <input class="photo__select-file" type="file" name="select-file" id="select-file" multiple>
             <ul class="photo__list">
               <li class="photo__item"><img class="photo__image" src="img/img-686.jpg" alt="img-686.jpg"><div class="photo__delete"></div><div class="photo__title">img-686.jpg</div></li>
               <li class="photo__item"><img class="photo__image" src="img/img-687.jpg" alt="img-687.jpg"><div class="photo__delete"></div><div class="photo__title">img-687.jpg</div></li>
@@ -231,6 +231,8 @@
       </div>
 
     </div>
+
+    <script src="js/script.js"></script>
 
   </body>
 
