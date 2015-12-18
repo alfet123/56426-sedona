@@ -41,6 +41,14 @@
     };
   });
 
+  var mainHeader = document.querySelector(".main-header");
+  var mainMenu = document.querySelector(".main-menu");
+  var menuOpenBtn = document.querySelector("#menu-open-btn");
+
+  menuOpenBtn.addEventListener("tap", function() {
+
+  });
+
   if (!("FormData" in window)) {
     return;
   }
