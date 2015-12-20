@@ -12,6 +12,9 @@
   var form = document.querySelector(".review");
   var dateDuration = form.querySelector("#date-duration");
   var memberAmount = form.querySelector("#member-amount");
+  var memberTable = document.querySelector("#member-table");
+
+  var rowTemplate = '<tr><td class="col-1"><label class="member__label" for="member-position-{{rowNumber}}">№</label><input class="member__input" type="text" name="member-position" id="member-position-{{rowNumber}}" value="{{rowNumber}}" readonly></td><td class="col-2"><label class="member__label" for="member-family-{{rowNumber}}">Фамилия:<span class="required-mark">*</span></label><input class="member__input" type="text" name="member-family" id="member-family-{{rowNumber}}" placeholder="Иванов" required></td><td class="col-3"><label class="member__label" for="member-name-{{rowNumber}}">Имя:<span class="required-mark">*</span></label><input class="member__input" type="text" name="member-name" id="member-name-{{rowNumber}}" placeholder="Петр" required></td><td class="col-4"><label class="member__label" for="member-patronymic-{{rowNumber}}">Отчество:</label><input class="member__input" type="text" name="member-patronymic" id="member-patronymic-{{rowNumber}}" placeholder="Александрович"></td></tr>';
 
   dateDuration.value = 14;
   memberAmount.value = 2;
@@ -26,16 +29,6 @@
     dateDuration.value++;
   });
 
-  form.querySelector("#member-minus").addEventListener("click", function() {
-    if (memberAmount.value > 0) {
-      memberAmount.value--;
-    }
-  });
-
-  form.querySelector("#member-plus").addEventListener("click", function() {
-    memberAmount.value++;
-  });
-
   dateDuration.addEventListener("change", function() {
     dateDuration.value = parseInt(dateDuration.value, 10);
     if (isNaN(dateDuration.value) || dateDuration.value < 0) {
@@ -43,11 +36,33 @@
     };
   });
 
+  function renderTable() {
+    var membersContent = '';
+    for (var i = 0; i < memberAmount.value; i++) {
+      var newMember = Mustache.render(rowTemplate, {"rowNumber": i+1});
+      membersContent += newMember;
+    };
+    memberTable.innerHTML = membersContent;
+  }
+
+  form.querySelector("#member-minus").addEventListener("click", function() {
+    if (memberAmount.value > 0) {
+      memberAmount.value--;
+    }
+    renderTable();
+  });
+
+  form.querySelector("#member-plus").addEventListener("click", function() {
+    memberAmount.value++;
+    renderTable();
+  });
+
   memberAmount.addEventListener("change", function() {
     memberAmount.value = parseInt(memberAmount.value, 10);
     if (isNaN(memberAmount.value) || memberAmount.value < 0) {
       memberAmount.value = 0;
     };
+    renderTable();
   });
 
   if (!("FormData" in window)) {
