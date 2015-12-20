@@ -7,6 +7,10 @@
   height: 56px;
 
   background-color: #fff;
+
+  &--hide-menu {
+    padding-top: 0;
+  }
 }
 
 .main-menu {
@@ -16,6 +20,10 @@
 
   margin: 0;
   padding: 0;
+
+  &--hidden {
+    display: none;
+  }
 }
 
 .main-menu__list {
@@ -119,6 +127,12 @@
 
   .main-header {
     padding-top: 0;
+  }
+
+  .main-menu {
+    &--hidden {
+      display: block;
+    }
   }
 
   .main-menu__item {

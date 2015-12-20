@@ -1,5 +1,14 @@
 (function() {
 
+  var mainHeader = document.querySelector(".main-header");
+  var mainMenu = document.querySelector(".main-menu");
+  var menuOpenBtn = document.querySelector("#menu-open-btn");
+
+  menuOpenBtn.addEventListener("click", function() {
+    mainMenu.classList.toggle('main-menu--hidden');
+    mainHeader.classList.toggle('main-header--hide-menu');
+  });
+
   var form = document.querySelector(".review");
   var dateDuration = form.querySelector("#date-duration");
   var memberAmount = form.querySelector("#member-amount");
@@ -41,19 +50,9 @@
     };
   });
 
-  var mainHeader = document.querySelector(".main-header");
-  var mainMenu = document.querySelector(".main-menu");
-  var menuOpenBtn = document.querySelector("#menu-open-btn");
-
-  menuOpenBtn.addEventListener("tap", function() {
-
-  });
-
   if (!("FormData" in window)) {
     return;
   }
-
-  var form = document.querySelector(".review");
 
   form.addEventListener("submit", function(event) {
     event.preventDefault();
@@ -107,7 +106,6 @@
         reader.readAsDataURL(file);
       }
     }
-
   }
 
 })();
