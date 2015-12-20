@@ -6,10 +6,37 @@ module.exports = function(grunt) {
   var config = {
     pkg: grunt.file.readJSON("package.json"),
 
+    clean: {
+      build: ["build"]
+    },
+
+    copy: {
+      build: {
+        files: [{
+          expand: true,
+          cwd: "source",
+          src: [
+            "img/**",
+            "js/**",
+            "*.html"
+          ],
+          dest: "build"
+        }]
+      }
+    },
+
     less: {
       style: {
         files: {
-          "css/style.css": "less/style.less"
+          "build/css/style.css": ["source/less/style.less"]
+        }
+      }
+    },
+
+    cmq: {
+      style: {
+        files: {
+          "build/css/style.css": ["build/css/style.css"]
         }
       }
     },
@@ -21,7 +48,31 @@ module.exports = function(grunt) {
         ]
       },
       style: {
-        src: "css/*.css"
+        src: "build/css/*.css"
+      }
+    },
+
+    cssmin: {
+      options {
+        keepSpecialComments: 0,
+        report: "gzip"
+      },
+      style: {
+        files: {
+          "build/css/style.min.css": ["build/css/style.css"]
+        }
+      }
+    },
+
+    imagemin: {
+      images: {
+        options: {
+          optimizationLevel: 3
+        },
+        files: [{
+          expand: true,
+          src: ["build/img/**/*.{png,jpg,gif,svg}"]
+        }]
       }
     },
 
@@ -43,4 +94,14 @@ module.exports = function(grunt) {
   config = require("./.gosha")(grunt, config);
 
   grunt.initConfig(config);
+
+  grunt.registerTask("build", [
+    "clean",
+    "copy",
+    "less",
+    "cmq",
+    "postcss",
+    "cssmin",
+    "imagemin"
+  ]);
 };
