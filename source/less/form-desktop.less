@@ -140,8 +140,10 @@
     margin-left: 0;
   }
 
-  .photo__item:nth-child(5n) {
-    margin-right: 0;
+  .photo__item {
+    &:nth-child(5n) {
+      margin-right: 0;
+    }
   }
 
   .photo__select-btn {
@@ -153,6 +155,16 @@
     &:hover {
       color: #fff;
       background-color: #669ec0;
+    }
+
+    &:focus {
+      color: #fff;
+      background-color: #81b3d2;
+    }
+
+    &:active {
+      color: #94b9d2;
+      background-color: #5496bd;
     }
   }
 

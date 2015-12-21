@@ -50,16 +50,29 @@
     background-color: #669ec0;
   }
 
+  &:active {
+    background-color: #5496bd;
+  }
+
   &__twitter {
-    background-image: url("../img/social-twitter.png");
+    background-image: url("../img/social-twitter.svg");
+    &:active {
+      background-image: url("../img/social-twitter-down.svg");
+    }
   }
 
   &__facebook {
-    background-image: url("../img/social-facebook.png");
+    background-image: url("../img/social-facebook.svg");
+    &:active {
+      background-image: url("../img/social-facebook-down.svg");
+    }
   }
 
   &__youtube {
-    background-image: url("../img/social-youtube.png");
+    background-image: url("../img/social-youtube.svg");
+    &:active {
+      background-image: url("../img/social-youtube-down.svg");
+    }
   }
 }
 
@@ -87,6 +100,11 @@
   &:hover {
     color: #669ec0;
     background-image: url("../img/ha-logo-hvr.svg");
+  }
+
+  &:active {
+    color: #b2b2b2;
+    background-image: url("../img/ha-logo-down.svg");
   }
 }
 

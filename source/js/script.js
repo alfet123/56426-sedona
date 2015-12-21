@@ -65,9 +65,13 @@
     renderTable();
   });
 
-  if (!("FormData" in window)) {
+  if (!("FormData" in window) || !("FileReader" in window)) {
     return;
   }
+
+  var photoList = document.querySelector(".photo__list");
+  var imgTemplate = '<img class="photo__image" src="{{imgSource}}" alt="{{fileName}}"><div class="photo__delete"></div><div class="photo__title">{{fileName}}</div>';
+  var queue = [];
 
   form.addEventListener("submit", function(event) {
     event.preventDefault();
@@ -94,33 +98,51 @@
     xhr.send(data);
   }
 
-  if ("FileReader" in window) {
-    var area = document.querySelector(".photo__list");
+  form.querySelector("#select-file").addEventListener("change", function() {
+    var files = this.files;
 
-    form.querySelector("#select-file").addEventListener("change", function() {
-      var files = this.files;
+    for (var i = 0; i < files.length; i++) {
+      preview(files[i]);
+    }
+  });
 
-      for (var i = 0; i < files.length; i++) {
-        preview(files[i]);
-      }
-    });
+  function preview(file) {
+    if (file.type.match(/image.*/)) {
+      var reader = new FileReader();
 
-    function preview(file) {
-      if (file.type.match(/image.*/)) {
-        var reader = new FileReader();
-
-        reader.addEventListener("load", function(event) {
-          var img = document.createElement("img");
-
-          img.src = event.target.result;
-          img.alt = file.name;
-
-          area.appendChild(img);
+      reader.addEventListener("load", function(event) {
+        var newImage = Mustache.render(imgTemplate, {
+          "imgSource": event.target.result,
+          "fileName": file.name
         });
 
-        reader.readAsDataURL(file);
-      }
+        var li = document.createElement("li");
+        li.classList.add("photo__item");
+        li.innerHTML = newImage;
+
+        photoList.appendChild(li);
+
+        li.querySelector(".photo__delete").addEventListener("click", function(event) {
+          event.preventDefault();
+          removePreview(li);
+        });
+
+        queue.push({
+          "file": file,
+          "li": li
+        });
+      });
+
+      reader.readAsDataURL(file);
     }
+  }
+
+  function removePreview(li) {
+    queue = queue.filter(function(element) {
+      return element.li != li;
+    });
+    
+    li.parentNode.removeChild(li);
   }
 
 })();

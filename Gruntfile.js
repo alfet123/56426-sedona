@@ -15,11 +15,7 @@ module.exports = function(grunt) {
         files: [{
           expand: true,
           cwd: "source",
-          src: [
-            "img/**",
-            "js/**",
-            "*.html"
-          ],
+          src: ["img/**", "*.html"],
           dest: "build"
         }]
       }
@@ -53,13 +49,29 @@ module.exports = function(grunt) {
     },
 
     cssmin: {
-      options {
+      options: {
         keepSpecialComments: 0,
         report: "gzip"
       },
       style: {
         files: {
           "build/css/style.min.css": ["build/css/style.css"]
+        }
+      }
+    },
+
+    concat: {
+      js: {
+        files: {
+          'build/js/script.js': ['source/js/lib/mustache.js', 'source/js/script.js']
+        }
+      }
+    },
+
+    uglify: {
+      js: {
+        files: {
+          'build/js/script.min.js': ['build/js/script.js']
         }
       }
     },
@@ -78,8 +90,8 @@ module.exports = function(grunt) {
 
     watch: {
       style: {
-        files: ["less/**/*.less"],
-        tasks: ["less", "postcss"],
+        files: ["source/less/**/*.less"],
+        tasks: ["less", "postcss", "cssmin"],
         options: {
           spawn: false,
           livereload: true
@@ -102,6 +114,8 @@ module.exports = function(grunt) {
     "cmq",
     "postcss",
     "cssmin",
+    "concat",
+    "uglify",
     "imagemin"
   ]);
 };
